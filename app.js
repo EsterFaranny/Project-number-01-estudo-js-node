@@ -6,7 +6,7 @@ var rotaHome = require('./app/routes/home.js')(app);
 var rotaForm = require('./app/routes/formulario_inclusao_noticia.js')(app);
 
 app.listen(3000, function(){
-  console.log('Servidor rodando com Express');
+  console.log('Servidor ON');
 });
     
 
