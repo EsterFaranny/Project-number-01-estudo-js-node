@@ -15,7 +15,8 @@ module.exports = function(app){
          //res.send(result);
          res.render('noticias/noticias',{noticias: result});
       });
-     
+      
+   
       //res.render('noticias/noticias');
       
    });
