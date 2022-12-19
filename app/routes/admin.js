@@ -11,9 +11,9 @@ module.exports = function(application){
 
         var connection = dbConnection();
 
-        var noticiasModel = application.app.models.noticiasModel;
+        var noticiasModel = new application.app.models.noticiasModel(connection);
 
-        noticiasModel.salvarNoticias(noticias,connection,function(error, result){
+        noticiasModel.salvarNoticias(noticias,function(error, result){
             res.redirect('/noticias');
       });
     });

@@ -6,13 +6,22 @@
 		</head>
 	<body>
 
-		<h1>Adicionar notícia</h1>
+		<h1>Adicionar Notícia</h1>
 		</br>
 		<form action="/noticias/salvar" method="post">
 			<label>Título</label>
 			<input type="text" id="titulo" name="titulo" placeholder="Título da notícia"></input>
 		    </br>
-			<label>Notícia</label>
+			<label>Resumo</label>
+			<input type="text" id="resumo" name="Resumo" placeholder="Resumo da notícia"></input>
+		    </br>
+			<label>Nome do Autor</label>
+			<input type="text" id="autor" name="nomeAutor" placeholder="Nome do autor"></input>
+		    </br>
+			<label>Data dos Fatos</label>
+			<input type="date" id="data_noticia" name="dataNoticia" placeholder="Data da noticia"></input>
+		    </br>
+
 			<textarea name="noticia" id="noticia" cols="21" rows="10"></textarea>
 			</br>
 			<input type="submit" value="Enviar"/>
