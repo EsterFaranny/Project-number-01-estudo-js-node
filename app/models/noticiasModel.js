@@ -16,8 +16,6 @@ Noticias.prototype.salvarNoticias = function(noticias,calback) {
     this._connection.query('insert into noticias set ?',noticias,calback);
 }
 
-
-
 module.exports = function(){
     return Noticias;
 };
