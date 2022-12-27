@@ -1,56 +1,101 @@
-<!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Formulário de cadastro de Notícia</title>
-		</head>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Portal de notícias</title>
+		
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+
 	<body>
 
-		<% if(validacao){ %>
-			<ul>
-				<% for(var i = 0; i< validacao.length; i++) { %>
-					<li>
-						<%= validacao[i].msg %>
-					</li>
-				<% }%>
-			</ul>
-		<% }%>
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<img src="images/logo.png" />
+				</div>
 
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">HOME</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+	    <div class="container">
 		
-		<h1>Adicionar Notícia</h1>
-		</br>
-		<form action="/noticias/salvar" method="post">
-			<label>Título</label>
-			<input type="text" id="titulo" name="titulo" value="<%=noticias.titulo %>" placeholder="Título da notícia"></input>
-		    
-		</br>
-			<label>Resumo</label>
-			<input type="text" id="resumo" name="resumo" value="<%=noticias.resumo %>" placeholder="Resumo da notícia"></input>
-		    
-		</br>
-			<label>Nome do Autor</label>
-			<input type="text" id="autorName" name="autorName" value="<%=noticias.autorName %>" placeholder="Nome do autor"></input>
-		    
-		</br>
-			<label>Data dos Fatos</label>
-			<input type="date" id="data_noticia" value="<%=noticias.data_noticia %>" name="data_noticia"></input>
-		    
-		</br>
-		</br>
-			<label>Data de Publicação</label>
-			<input type="date" id="data_criacao" value="<%=noticias.data_criacao %>" name="data_criacao"></input>
-		    
-		</br>
-			<label>notícia</label>
-			
-		</br>
-			<textarea name="noticia" id="noticia" value="<%=noticias.noticia%>" cols="21" rows="10" placeholder="Descreva a Notícia"></textarea></textarea>
-			
-		</br> 
-			<input type="submit" value="Enviar"/>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-danger">
+						<strong>Atenção!</strong>
+						<ul>
+							<li>Título é obrigatório</li>
+							<li>Resumo é obrigatório</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<form>
+						<div class="form-group">
+							<label for="titulo">Título:</label>
+							<input type="text" class="form-control" id="titulo" name="titulo">
+						</div>
 
-		</form>
+						<div class="form-group">
+							<label for="pwd">Resumo:</label>
+							<input type="text" class="form-control" id="resumo" name="resumo">
+						</div>
+						
+						<div class="form-group">
+							<label for="pwd">Autor:</label>
+							<input type="text" class="form-control" id="autor" name="autor">
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Data dos Fatos:</label>
+							<input type="date" class="form-control" id="data_noticia" name="data_noticia">
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Data de Publicação:</label>
+							<input type="date" class="form-control" id="dt_noticia" name="dt_noticia">
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Notícia:</label>
+							<textarea class="form-control" id="noticia" name="noticia"></textarea>
+						</div>
 
 
+						<button type="submit" class="btn btn-default">Cadastrar</button>
+						</form>
+		    	</div>
+	    	</div>
+	    </div>
+	
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
 	</body>
 </html>
