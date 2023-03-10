@@ -43,90 +43,21 @@
 
 
 	    <div class="container">
-	    	<div class="row">
-	    		<div class="col-md-12">
-	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor">Por Ester Faranny</span>
-		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-		    			<span class="noticia_data">27/12/2022</span>
-		    			<br />
-		    			<p class="noticia_resumo">
-		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
-		    			</p>
+	    		<div class="row">
+					<% for(var i = 0; i < noticias.length; i++ ) { %>
+	    			<div class="col-md-12">
+	    				<div class="noticia_wrapper">
+		    				<span class="noticia_autor"><%= noticias[i].autorName %></span>
+		    				<a href="noticia.html" class="noticia_titulo"><%= noticias[i].titulo %></a>
+		    				<span class="noticia_data"><%= noticias[i].data_Criacao %></span>
+		    				<br />
+		    				<p class="noticia_resumo">
+		    					<%= noticias[i].resumo %>
+		    				</p>
+		    			</div>
 		    		</div>
-		    	</div>
-			</div>
-			<div class="row">
-	    		<div class="col-md-12">
-	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor">Por Ester Faranny</span>
-		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-		    			<span class="noticia_data">27/12/2022</span>
-
-		    			<br />
-		    			<p class="noticia_resumo">
-		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
-		    			</p>
-		    		</div>
-		    	</div>
-			</div>
-			<div class="row">
-	    		<div class="col-md-12">
-	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor">Por Ester Faranny</span>
-		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-		    			<span class="noticia_data">27/12/2022</span>
-
-		    			<br />
-		    			<p class="noticia_resumo">
-		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
-		    			</p>
-		    		</div>
-		    	</div>
-	    	</div>
-
-	    	<div class="row">
-	    		<div class="col-md-12">
-	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor">Por Ester Faranny</span>
-		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-		    			<span class="noticia_data">27/12/2022</span>
-		    			<br />
-		    			<p class="noticia_resumo">
-		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
-		    			</p>
-		    		</div>
-		    	</div>
-			</div>
-			<div class="row">
-	    		<div class="col-md-12">
-	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor">Por Ester Faranny</span>
-		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-		    			<span class="noticia_data">27/12/2022</span>
-
-		    			<br />
-		    			<p class="noticia_resumo">
-		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
-		    			</p>
-		    		</div>
-		    	</div>
-			</div>
-			<div class="row">
-	    		<div class="col-md-12">
-	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor">Por Ester Faranny</span>
-		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
-		    			<span class="noticia_data">27/12/2022</span>
-
-		    			<br />
-		    			<p class="noticia_resumo">
-		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
-		    			</p>
-		    		</div>
-		    	</div>
-	    	</div>
-			
+					<% } %>	
+				</div>
 	    </div>
 	
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
