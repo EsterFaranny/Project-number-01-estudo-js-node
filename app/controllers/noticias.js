@@ -4,8 +4,8 @@ module.exports.list_noticias = function(application, req, res){
     var connection = dbConnection()
     var noticiasModel = new application.app.models.noticiasModel(connection);
 
-       noticiasModel.getNoticias(function(error, result){
-       res.render('noticias/noticias',{noticias: result});
+    noticiasModel.getNoticias(function(error, result){
+        res.render('noticias/noticias',{noticias: result});
     });
 }
 
