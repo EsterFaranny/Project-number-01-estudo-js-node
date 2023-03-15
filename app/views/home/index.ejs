@@ -35,7 +35,7 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/app/views/home/index.ejs">HOME</a></li>
+						<!-- <li><a href="/">HOME</a></li> -->
 					</ul>
 				</div>
 			</div>
@@ -43,11 +43,11 @@
 
 
 	    <div class="container">
-			<div class="col-md-12">
+			<div class="col-md-15">
 				<% for(var i = 0; i < noticias.length; i++ ) { %>
 	    		<div class="noticia_wrapper">
 		    		<span class="noticia_autor"> <%= noticias[i].autorName %></span>
-		    		<a href="noticia.html" class="noticia_titulo"><%= noticias[i].titulo %></a>
+		    		<a href="noticia?id_noticia=<%= noticias[i].id_noticia %>" class="noticia_titulo"><%= noticias[i].titulo %></a>
 		    		<span class="noticia_data"><%= noticias[i].data_criacao %></span>
 		    		<br />
 		    		<p class="noticia_resumo">

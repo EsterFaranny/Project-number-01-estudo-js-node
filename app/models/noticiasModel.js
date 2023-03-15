@@ -7,8 +7,8 @@ Noticias.prototype.getNoticias = function(callback){
     this._connection.query('select * from noticias order by data_criacao desc',callback);
 }
 
-Noticias.prototype.getNoticia = function(callback) {
-    this._connection.query('select * from noticias where id_noticia = 18',callback);
+Noticias.prototype.getNoticia = function(id_noticia,callback) {
+    this._connection.query('select * from noticias where id_noticia =' + id_noticia.id_noticia,callback);
 }
 
 
