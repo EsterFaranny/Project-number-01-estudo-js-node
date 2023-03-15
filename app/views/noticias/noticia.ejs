@@ -46,12 +46,12 @@
 	    	<div class="row">
 	    		<div class="col-md-12">
 	    			<div class="noticia_wrapper">
-		    			<span class="noticia_autor">Por Ester Faranny</span>
-		    			<a href="noticia/1" class="noticia_titulo">Título da notícia</a>
-		    			<span class="noticia_data">27/12/2022</span>
+		    			<span class="noticia_autor"><%= noticia[0].autorName %></span>
+		    			<a href="noticia.html" class="noticia_titulo"><%= noticia[0].titulo %></a>
+		    			<span class="noticia_data"><%= noticia[0].data_Criacao %></span>
 		    			<br />
 		    			<p class="noticia_resumo">
-		    				Aqui fica o texto da notícia na íntegra.
+		    				<%= noticia[0].resumo %>
 		    			</p>
 		    		</div>
 		    	</div>
