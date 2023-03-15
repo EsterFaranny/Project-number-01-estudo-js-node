@@ -20,3 +20,14 @@ module.exports.list_noticia = function(application, req, res){
        res.render('noticias/noticia',{noticia: result});
     });   
 }
+
+module.exports.list_noticia_c = function(application, req, res){
+    var connection = dbConnection()
+    var noticiasModel = new application.app.models.noticiasModel(connection);
+
+    var id_noticia = req.query;
+
+    noticiasModel.getNoticia(id_noticia,function(error, result){ 
+       res.render('noticias/noticia_c',{noticia: result});
+    });   
+}
