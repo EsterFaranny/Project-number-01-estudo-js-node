@@ -8,6 +8,8 @@ module.exports.page_home = function(application, req, res){
         res.render('home/index',{noticias: result}); 
         console.log(result);
     });
-
   
+    noticiasModel.get5UltimasNoticas(function(error, result){
+        res.render('home/login'); 
+    });
 };
